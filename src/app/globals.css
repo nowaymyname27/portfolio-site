@@ -7,6 +7,9 @@
   /* Main brand colors */
   --main: #e56399;
   --main-foreground: #1a1a1a;
+
+  --accent: #8093f1;
+  --accent-foreground: #f5f7fa;
 }
 
 @theme inline {
@@ -16,6 +19,9 @@
   /* Expose main colors to Tailwind */
   --color-main: var(--main);
   --color-main-foreground: var(--main-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
