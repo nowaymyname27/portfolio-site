@@ -1,10 +1,31 @@
-// src/app/(site)/(home)/components/WhatIDo.tsx
+// src/app/(site)/(home)/components/SplitSection.tsx
 "use client";
 
 import { motion } from "framer-motion";
-import { SiNextdotjs } from "react-icons/si";
+import { ReactNode } from "react";
 
-export default function WhatIDo({ reverse = false }) {
+export interface TechItem {
+  icon: ReactNode;
+  label: string;
+}
+
+export interface SplitSectionProps {
+  heading: string;
+  description: string;
+  imageColor: string;
+  imageBW: string;
+  reverse?: boolean;
+  tech: TechItem[];
+}
+
+export default function SplitSection({
+  heading,
+  description,
+  imageColor,
+  imageBW,
+  reverse = false,
+  tech,
+}: SplitSectionProps) {
   return (
     <section
       className={`
@@ -25,17 +46,15 @@ export default function WhatIDo({ reverse = false }) {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
         >
-          {/* COLOR IMAGE (bottom) */}
           <img
-            src="/website_fox.png"
-            alt="Color Illustration"
+            src={imageColor}
+            alt={heading}
             className="absolute inset-0 w-full h-full object-contain"
           />
 
-          {/* BW IMAGE (top, fades out on hover) */}
           <motion.img
-            src="/website_fox_bw.png"
-            alt="BW Illustration"
+            src={imageBW}
+            alt={heading + " BW Version"}
             className="absolute inset-0 w-full h-full object-contain"
             initial={{ opacity: 1 }}
             whileHover={{ opacity: 0 }}
@@ -53,58 +72,56 @@ export default function WhatIDo({ reverse = false }) {
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         {/* Heading */}
-        <h3 className="text-5xl font-bold text-black leading-tight">
-          Building clean, fast, modern web experiences.
-        </h3>
+        <motion.h3
+          className="text-5xl font-bold text-black leading-tight cursor-pointer transition-colors duration-200"
+          whileHover={{ color: "var(--main)" }}
+        >
+          {heading}
+        </motion.h3>
 
-        {/* Tech Logos (staggered reveal) */}
+        {/* Tech Logos */}
         <motion.div
-          className="flex items-center gap-7 text-5xl text-black"
+          className="flex flex-wrap items-center gap-7 text-5xl text-black max-w-[90%]"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           variants={{
             hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.15, // icon-by-icon reveal
-              },
-            },
+            show: { transition: { staggerChildren: 0.15 } },
           }}
         >
-          {/* ICON VARIANTS */}
-          {[
-            <i className="devicon-react-original colored" key="react" />,
-            <SiNextdotjs className="text-black" key="next" />,
-            <i className="devicon-typescript-plain colored" key="ts" />,
-            <i className="devicon-javascript-plain colored" key="js" />,
-            <i className="devicon-tailwindcss-plain colored" key="tailwind" />,
-            <i className="devicon-framermotion-plain colored" key="framer" />,
-          ].map((icon, i) => (
+          {tech.map((item, i) => (
             <motion.div
               key={i}
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 show: { opacity: 1, y: 0 },
               }}
-              whileHover={{
-                scale: 1.15,
-                opacity: 1,
-              }}
+              whileHover={{ scale: 1.15, opacity: 1 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="cursor-pointer opacity-80 hover:opacity-100"
+              className="relative flex items-center justify-center cursor-pointer opacity-80 hover:opacity-100 group"
             >
-              {icon}
+              {item.icon}
+
+              {/* Tooltip */}
+              <div
+                className="
+                  absolute -top-10 left-1/2 -translate-x-1/2
+                  bg-black text-white text-sm px-3 py-1 rounded-md
+                  whitespace-nowrap pointer-events-none
+                  opacity-0 translate-y-2
+                  transition-all duration-200 ease-out
+                  group-hover:opacity-100 group-hover:translate-y-0
+                "
+              >
+                {item.label}
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Description */}
-        <p className="text-2xl text-black/70 leading-relaxed">
-          I specialize in creating smooth interfaces, interactive components,
-          animations that feel natural, and high-performance apps using
-          technologies like Next.js, Tailwind, and Framer Motion.
-        </p>
+        <p className="text-2xl text-black/70 leading-relaxed">{description}</p>
       </motion.div>
     </section>
   );

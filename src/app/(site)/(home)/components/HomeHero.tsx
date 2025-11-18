@@ -6,7 +6,7 @@ import { FiFileText } from "react-icons/fi";
 
 export default function HomeHero() {
   return (
-    <section className="w-full min-h-screen px-20 py-10 flex items-center justify-between bg-white">
+    <section className="w-full min-h-screen px-20 py-10 flex items-center justify-between bg-background">
       {/* LEFT SIDE */}
       <motion.div
         className="flex flex-col gap-10 w-1/2"
@@ -156,15 +156,15 @@ export default function HomeHero() {
         <div className="relative">
           {/* Glow fade-in */}
           <motion.div
-            className="absolute inset-0 rounded-full blur-[90px] scale-[1.6]"
-            style={{ backgroundColor: "rgba(128,147,241,0.35)" }}
+            className="absolute inset-0 rounded-full blur-[80px] scale-[1]"
+            style={{ backgroundColor: "var(--main)" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           />
 
           <motion.div
-            className="relative rounded-full overflow-hidden bg-white shadow-2xl shadow-black/20"
+            className="relative rounded-full overflow-hidden bg-white shadow-xl shadow-black/20"
             style={{ width: "480px", height: "480px" }}
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
@@ -173,8 +173,8 @@ export default function HomeHero() {
             <div
               className="
                 absolute inset-0 rounded-full pointer-events-none
-                bg-gradient-to-br from-white/40 to-transparent
-                opacity-40 mix-blend-screen
+                bg-gradient-to-br from-white/10 to-transparent
+                opacity-10 mix-blend-screen
               "
             />
 

@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-[var(--background)] text-[var(--foreground)]">
       <head>
-        {/* Devicon icons */}
+        {/* Devicon CDN for all tool logos */}
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
