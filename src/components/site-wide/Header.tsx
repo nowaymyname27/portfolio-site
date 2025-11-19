@@ -102,7 +102,7 @@ export default function Header() {
             About
           </a>
           <a
-            href="/"
+            href="/projects"
             className="px-5 flex items-center h-full transition-colors hover:bg-accent hover:text-accent-foreground"
           >
             Projects

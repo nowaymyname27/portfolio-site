@@ -78,7 +78,7 @@ export default function CertificateCard({
             paddingTop: "20px",
             paddingBottom: "18px",
             clipPath: "ellipse(120% 100% at 50% 0%)",
-            backgroundColor: "rgba(0, 0, 0, 0.05)",
+            backgroundColor: "#4f77d464",
           }}
         >
           <h3 className="text-lg font-semibold leading-tight">{title}</h3>
@@ -96,13 +96,13 @@ export default function CertificateCard({
                 borderColor: glowColor,
               }}
               className="
-                mt-4 px-4 py-1.5 border rounded-lg text-sm
+                mt-4 px-4 py-1.5 border rounded-lg text-sm font-semibold
                 opacity-90 hover:opacity-100 transition-all
               "
               style={{
                 color: glowColor,
                 borderColor: glowColor,
-                backgroundColor: "transparent",
+                backgroundColor: "white",
               }}
             >
               View Credential
