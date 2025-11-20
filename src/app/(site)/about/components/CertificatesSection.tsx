@@ -33,11 +33,11 @@ export default function CertificatesSection() {
         "
       >
         <CertificateCard
-          badge="/aws_logo.png"
+          badge="/about/aws_logo.png"
           title="AWS Certified Cloud Practitioner"
           issuer="Amazon Web Services"
           date="2025"
-          link="https://aws.amazon.com/certification/"
+          link="https://cp.certmetrics.com/amazon/en/public/verify/credential/fe5b8d339ac840a1befd349b3648dca1"
           glowColor="#FE8E03"
         />
       </div>

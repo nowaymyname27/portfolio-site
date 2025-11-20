@@ -7,7 +7,7 @@ export default function Education() {
       <h2 className="text-4xl font-semibold mb-10">Education</h2>
 
       <EntryCard
-        logo="/Boston_University_seal.svg"
+        logo="/about/Boston_University_seal.svg"
         title="Boston University"
         subtitle="B.A. in Computer Science"
         date="2022 – 2025"

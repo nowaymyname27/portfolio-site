@@ -92,7 +92,7 @@ export default function HomeHero() {
         >
           {/* LinkedIn */}
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/in/nowaymyname27/"
             target="_blank"
             className="
               group flex items-center h-14 rounded-full
@@ -121,7 +121,7 @@ export default function HomeHero() {
 
           {/* GitHub */}
           <motion.a
-            href="#"
+            href="https://github.com/nowaymyname27"
             target="_blank"
             className="
               group flex items-center h-14 rounded-full

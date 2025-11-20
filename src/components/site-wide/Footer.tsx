@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           {/* GitHub Icon */}
           <motion.a
-            href="https://github.com/"
+            href="https://github.com/nowaymyname27"
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-80 hover:opacity-100 transition-opacity"
@@ -41,7 +41,7 @@ export default function Footer() {
 
           {/* LinkedIn Icon */}
           <motion.a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/nowaymyname27/"
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-80 hover:opacity-100 transition-opacity"

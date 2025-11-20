@@ -27,8 +27,8 @@ export const splitSections: SplitSectionData[] = [
     heading: "Full-stack Development with Modern Tools.",
     description:
       "I design, build, and deploy full-stack applications from end to end. My work spans UI engineering, API design, cloud deployment, and scalable infrastructure. I focus on clean architecture, fast performance, and seamless user experiences.",
-    imageColor: "/website_fox.png",
-    imageBW: "/website_fox_bw.png",
+    imageColor: "/home/website_fox.png",
+    imageBW: "/home/website_fox_bw.png",
     reverse: false,
     tech: [
       {
@@ -81,8 +81,8 @@ export const splitSections: SplitSectionData[] = [
     heading: "Using Python and Machine Learning to Extract Insights.",
     description:
       "I work with Python to analyze data, build predictive models, and explore machine learning workflows. From data preprocessing to deep learning research, I use modern tools to turn raw information into meaningful insights.",
-    imageColor: "/fox_data.png",
-    imageBW: "/fox_data_bw.png",
+    imageColor: "/home/fox_data.png",
+    imageBW: "/home/fox_data_bw.png",
     reverse: true,
     tech: [
       {
@@ -155,8 +155,8 @@ export const splitSections: SplitSectionData[] = [
     heading: "Bringing Game Ideas to Life.",
     description:
       "I love game development through engines like Unity, Unreal, and specially Godot. I work with C#, C++, and GDScript to prototype mechanics, design gameplay systems, and bring game ideas to life.",
-    imageColor: "/fox_game.png",
-    imageBW: "/fox_game_bw.png",
+    imageColor: "/home/fox_game.png",
+    imageBW: "/home/fox_game_bw.png",
     reverse: false,
     tech: [
       {

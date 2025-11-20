@@ -61,7 +61,7 @@ export default function ProjectsHero() {
 
               {/* BW fades on hover */}
               <motion.img
-                src="/fox_labcoat_bw.png"
+                src="/projects/fox_labcoat_bw.png"
                 alt="Fox BW"
                 className="absolute inset-0 w-full h-full object-contain"
                 initial={{ opacity: 1 }}
@@ -97,7 +97,7 @@ export default function ProjectsHero() {
           >
             {/* Color */}
             <Image
-              src="/fox_labcoat.png"
+              src="/projects/fox_labcoat.png"
               alt="Fox illustration"
               fill
               className="object-contain object-right"
@@ -106,7 +106,7 @@ export default function ProjectsHero() {
 
             {/* BW fades on hover */}
             <motion.img
-              src="/fox_labcoat_bw.png"
+              src="/projects/fox_labcoat_bw.png"
               alt="Fox illustration BW"
               className="absolute inset-0 w-full h-full object-contain object-right"
               initial={{ opacity: 1 }}
