@@ -37,8 +37,9 @@ export default function ProjectCard({
       style={{ "--glow": glowColor } as React.CSSProperties}
       className="
         group
-        w-[400px] aspect-[5/6] rounded-xl
-        overflow-visible
+        w-full max-w-[400px]
+        rounded-xl
+        overflow-hidden
         border border-neutral-400
         bg-transparent
         transition-all duration-300
@@ -46,21 +47,34 @@ export default function ProjectCard({
 
         hover:scale-[1.015]
         hover:shadow-[0_0_22px_var(--glow)]
+
+        max-h-[650px]
       "
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      {/* IMAGE SECTION */}
-      <div
+      {/* IMAGE SECTION — dynamically shrinks if needed */}
+      <motion.div
         className="
-          relative w-full h-[60%] flex items-center justify-center
+          relative w-full
+          flex items-center justify-center
           bg-transparent
           overflow-hidden
         "
+        style={{
+          height: "min(300px, 35vh)", // default size
+        }}
+        animate={{
+          height: ["300px", "260px", "220px"], // shrink if content pushes
+        }}
+        transition={{
+          duration: 0.4,
+          ease: "easeOut",
+        }}
       >
-        {/* NEW RADIAL GLOW BEHIND IMAGE */}
+        {/* Glow */}
         <div
           className="
             absolute inset-0
@@ -78,20 +92,21 @@ export default function ProjectCard({
           }}
         />
 
-        {/* IMAGE */}
         <Image
           src={image.src}
           alt={image.alt || title}
           fill
-          className="object-contain p-4 relative z-10"
+          className="
+            object-contain p-4
+            transition-all duration-300
+          "
         />
-      </div>
+      </motion.div>
 
       {/* CONTENT SECTION */}
-      <div className="flex-1 p-4 flex flex-col justify-between bg-accent/30">
+      <div className="flex-1 p-4 flex flex-col justify-between bg-accent/30 overflow-hidden">
         <div>
           <h2 className="text-lg font-semibold text-black mb-1">{title}</h2>
-
           <p className="text-black text-sm leading-relaxed">{description}</p>
         </div>
 
@@ -118,10 +133,8 @@ export default function ProjectCard({
                 whileHover={{ scale: 1.12 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
               >
-                {/* ICON */}
                 <div className="text-4xl leading-none">{item.icon}</div>
 
-                {/* TOOLTIP */}
                 {item.label && (
                   <span
                     className="

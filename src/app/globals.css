@@ -10,13 +10,13 @@
 
   /* Brand Colors */
   --main: #e56399;
+  --main-rgb: 229, 99, 153; /* <-- ADD THIS */
   --main-foreground: #1a1a1a;
 
   /* Accent (Blue) */
   --accent: #4f77d4ff;
   --accent-foreground: #f5f7fa;
 }
-
 /* ========================= */
 /*  Tailwind Theme Exposure  */
 /* ========================= */

@@ -29,20 +29,33 @@ export default function SplitSection({
   return (
     <section
       className={`
-        w-full min-h-[70vh] px-20 py-24 flex items-center justify-between gap-20
-        ${reverse ? "flex-row-reverse" : "flex-row"}
-      `}
+    w-full min-h-auto lg:min-h-[70vh] 
+    px-6 lg:px-20 
+    py-10 lg:py-24
+    flex flex-col lg:flex-row 
+    items-center justify-between 
+    gap-6 lg:gap-20
+    ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}
+  `}
     >
-      {/* IMAGE SIDE */}
+      {/* DESKTOP IMAGE */}
       <motion.div
-        className="w-1/2 h-full flex justify-center items-center"
+        className="hidden lg:flex w-1/2 h-full justify-center items-center"
         initial={{ opacity: 0, x: reverse ? 60 : -60 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <motion.div
-          className="relative w-full h-[70vh] rounded-2xl overflow-hidden"
+          className="
+            relative
+            w-[380px] h-[380px]
+            sm:w-[460px] sm:h-[460px]
+            md:w-[560px] md:h-[560px]
+            lg:w-[680px] lg:h-[680px]
+            xl:w-[820px] xl:h-[820px]
+            2xl:w-[900px] 2xl:h-[900px]
+          "
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
         >
@@ -65,7 +78,7 @@ export default function SplitSection({
 
       {/* TEXT SIDE */}
       <motion.div
-        className="w-1/2 flex flex-col gap-10"
+        className="w-full lg:w-1/2 flex flex-col gap-10 text-center lg:text-left"
         initial={{ opacity: 0, x: reverse ? -60 : 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -73,15 +86,51 @@ export default function SplitSection({
       >
         {/* Heading */}
         <motion.h3
-          className="text-5xl font-bold text-black leading-tight cursor-pointer transition-colors duration-200"
+          className="text-5xl font-bold text-black leading-tight cursor-pointer"
           whileHover={{ color: "var(--main)" }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
         >
           {heading}
         </motion.h3>
 
+        {/* MOBILE IMAGE */}
+        <div className="lg:hidden flex justify-center">
+          <motion.div
+            className="
+              relative
+              w-[380px] h-[380px]
+              sm:w-[460px] sm:h-[460px]
+              md:w-[560px] md:h-[560px]
+              lg:w-[680px] lg:h-[680px]
+              xl:w-[820px] xl:h-[820px]
+              2xl:w-[900px] 2xl:h-[900px]
+            "
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+          >
+            <img
+              src={imageColor}
+              alt={heading}
+              className="absolute inset-0 w-full h-full object-contain"
+            />
+
+            <motion.img
+              src={imageBW}
+              alt={heading + " BW Version"}
+              className="absolute inset-0 w-full h-full object-contain"
+              initial={{ opacity: 1 }}
+              whileHover={{ opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            />
+          </motion.div>
+        </div>
+
         {/* Tech Logos */}
         <motion.div
-          className="flex flex-wrap items-center gap-7 text-5xl text-black max-w-[90%]"
+          className="
+            flex flex-wrap items-center justify-center lg:justify-start
+            gap-7 text-5xl text-black max-w-[90%] mx-auto lg:mx-0
+          "
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -103,7 +152,6 @@ export default function SplitSection({
             >
               {item.icon}
 
-              {/* Tooltip */}
               <div
                 className="
                   absolute -top-10 left-1/2 -translate-x-1/2
@@ -121,7 +169,9 @@ export default function SplitSection({
         </motion.div>
 
         {/* Description */}
-        <p className="text-2xl text-black/70 leading-relaxed">{description}</p>
+        <p className="text-2xl text-black/70 leading-relaxed max-w-[90%] mx-auto lg:mx-0">
+          {description}
+        </p>
       </motion.div>
     </section>
   );

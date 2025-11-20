@@ -1,5 +1,4 @@
 // file: src/app/(site)/projects/components/ProjectsSection.tsx
-
 "use client";
 
 import ProjectCard from "./ProjectCard";
@@ -8,15 +7,27 @@ import ProjectCard from "./ProjectCard";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 
-// Example: Node.js custom icon component if you have one
-// import { NodejsOriginal } from "@/components/icons/NodejsOriginal";
-
 export default function ProjectsSection() {
   return (
-    <section className="w-full px-16 py-24">
-      <h2 className="text-3xl font-semibold mb-12 text-center">Projects</h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 justify-items-center">
+    <section
+      className="
+        w-full 
+        px-6 sm:px-10 lg:px-16 
+        py-10 lg:py-24
+      "
+    >
+      <div
+        className="
+          w-full
+          grid
+          grid-cols-1 
+          sm:grid-cols-2 
+          lg:grid-cols-3 
+          xl:grid-cols-4
+          gap-10
+          justify-items-center
+        "
+      >
         {/* Sample 1 */}
         <ProjectCard
           title="Portfolio Website"
@@ -49,7 +60,7 @@ export default function ProjectsSection() {
             alt: "API project screenshot",
           }}
           github="https://github.com/example/api-service"
-          glowColor="#83CD29" // Node green
+          glowColor="#83CD29"
           tech={[
             {
               icon: <i className="devicon-nodejs-plain colored" />,
@@ -71,7 +82,7 @@ export default function ProjectsSection() {
             alt: "Machine learning preview",
           }}
           github="https://github.com/example/ml-tool"
-          glowColor="#3776AB" // Python blue
+          glowColor="#3776AB"
           tech={[
             {
               icon: <i className="devicon-python-plain colored" />,
@@ -83,7 +94,7 @@ export default function ProjectsSection() {
           ]}
         />
 
-        {/* Sample 4 (duplicate or placeholder) */}
+        {/* Sample 4 */}
         <ProjectCard
           title="Second Portfolio"
           description="Another example project showing multiple links and different tech."
@@ -92,13 +103,12 @@ export default function ProjectsSection() {
             alt: "Portfolio example",
           }}
           github="https://github.com/example/portfolio2"
-          glowColor="var(--accent)" // Blue glow
+          glowColor="var(--accent)"
           tech={[
             {
               icon: <i className="devicon-typescript-plain colored" />,
               label: "TypeScript",
             },
-
             {
               icon: <i className="devicon-react-original colored" />,
               label: "React",
