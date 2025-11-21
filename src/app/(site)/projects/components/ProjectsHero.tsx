@@ -51,7 +51,7 @@ export default function ProjectsHero() {
             >
               {/* Color */}
               <Image
-                src="/fox_labcoat.png"
+                src="/projects/fox_labcoat.png"
                 alt="Fox illustration"
                 fill
                 className="object-contain"
