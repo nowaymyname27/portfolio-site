@@ -31,7 +31,6 @@ export default function SplitSection({
       className={`
     w-full min-h-auto lg:min-h-[70vh] 
     px-6 lg:px-20 
-    py-10 lg:py-24
     flex flex-col lg:flex-row 
     items-center justify-between 
     gap-6 lg:gap-20

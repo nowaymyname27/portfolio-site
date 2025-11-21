@@ -2,6 +2,9 @@
 "use client";
 
 import ProjectCard from "./ProjectCard";
+import NumpyOriginal from "react-devicons/numpy/original";
+import PandasOriginal from "react-devicons/pandas/original";
+import JupyterOriginalWordmark from "react-devicons/jupyter/original-wordmark";
 
 // Devicon-based icons (colored)
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
@@ -31,90 +34,138 @@ export default function ProjectsSection() {
         {/* Sample 1 */}
         <ProjectCard
           title="Portfolio Website"
-          description="Personal site built using Next.js, TailwindCSS, and server-side rendering."
+          description="This very site you are on! Built using React, Next.js, TailwindCSS, and some sweet server-side rendering."
           image={{
             src: "/fox_logo.png",
             alt: "Portfolio website screenshot",
           }}
-          github="https://github.com/example/portfolio"
+          github="https://github.com/nowaymyname27/portfolio-site"
           glowColor="var(--main)"
           tech={[
+            {
+              icon: <i className="devicon-react-original colored" />,
+              label: "React",
+            },
             {
               icon: <i className="devicon-tailwindcss-plain colored" />,
               label: "TailwindCSS",
             },
             {
+              icon: <i className="devicon-typescript-plain colored" />,
+              label: "TypeScript",
+            },
+            { icon: <SiNextdotjs />, label: "Next.js" },
+            {
+              icon: <i className="devicon-framermotion-plain colored" />,
+              label: "Framer Motion",
+            },
+          ]}
+        />
+        <ProjectCard
+          title="FollowingNYC Website"
+          description="My first client's website! Built specifically to manage thousands of photos without the client knowing any code!"
+          image={{
+            src: "/about/following_logo.png",
+            alt: "Portfolio website screenshot",
+          }}
+          github="https://github.com/nowaymyname27/followingnyc-site"
+          glowColor="#DD442F"
+          tech={[
+            {
               icon: <i className="devicon-react-original colored" />,
               label: "React",
             },
-          ]}
-          extraLinks={[{ label: "Live Demo", href: "https://example.com" }]}
-        />
-
-        {/* Sample 2 */}
-        <ProjectCard
-          title="API Service"
-          description="REST API using Node.js and Express, handling user data and sessions."
-          image={{
-            src: "/sample-projects/api.jpg",
-            alt: "API project screenshot",
-          }}
-          github="https://github.com/example/api-service"
-          glowColor="#83CD29"
-          tech={[
             {
-              icon: <i className="devicon-nodejs-plain colored" />,
-              label: "Node.js",
+              icon: <i className="devicon-tailwindcss-plain colored" />,
+              label: "TailwindCSS",
             },
             {
-              icon: <i className="devicon-express-original colored" />,
-              label: "Express",
+              icon: <i className="devicon-javascript-plain colored" />,
+              label: "JavaScript",
+            },
+            { icon: <SiNextdotjs />, label: "Next.js" },
+            {
+              icon: <i className="devicon-sanity-plain colored" />,
+              label: "Sanity",
+            },
+          ]}
+          extraLinks={[
+            {
+              label: "Live Site",
+              href: "https://www.followingnyc.com/",
             },
           ]}
         />
-
-        {/* Sample 3 */}
         <ProjectCard
-          title="Machine Learning Tool"
-          description="A small ML experiment using Python and regression techniques."
+          title="Sentiment Analysis Data Science Project"
+          description="A collaborative project I contributed to while at University!"
           image={{
-            src: "/sample-projects/ml.jpg",
-            alt: "Machine learning preview",
+            src: "/projects/Stock-Market.png",
+            alt: "Portfolio website screenshot",
           }}
-          github="https://github.com/example/ml-tool"
-          glowColor="#3776AB"
+          github="https://github.com/nowaymyname27/Sentiment_Analysis_And_Stock_Prediction"
+          glowColor="#09A1B1"
           tech={[
             {
               icon: <i className="devicon-python-plain colored" />,
               label: "Python",
             },
+
+            // NumPy (local SVG)
+            {
+              icon: <NumpyOriginal />,
+              label: "NumPy",
+            },
+
+            // Pandas (local SVG)
+            {
+              icon: <PandasOriginal />,
+              label: "Pandas",
+            },
+
+            // Scikit-Learn (local SVG)
+            {
+              icon: (
+                <img
+                  src="/icons/sklearn.svg"
+                  alt="Scikit-Learn"
+                  className="w-12 h-12"
+                />
+              ),
+              label: "Scikit-Learn",
+            },
+
+            {
+              icon: <JupyterOriginalWordmark />,
+              label: "Jupyter Notebook",
+            },
           ]}
           extraLinks={[
-            { label: "Notebook", href: "https://example.com/notebook" },
+            {
+              label: "Video Demo",
+              href: "https://youtu.be/wpLwfAlvnOg?feature=shared",
+            },
           ]}
         />
-
-        {/* Sample 4 */}
         <ProjectCard
-          title="Second Portfolio"
-          description="Another example project showing multiple links and different tech."
+          title="An HTTP Server From Scratch"
+          description="Built my own HTTP server from scracth using good old C!"
           image={{
-            src: "/sample-projects/portfolio.jpg",
-            alt: "Portfolio example",
+            src: "/projects/server.png",
+            alt: "Portfolio website screenshot",
           }}
-          github="https://github.com/example/portfolio2"
-          glowColor="var(--accent)"
+          github="https://github.com/nowaymyname27/codecrafters-http-server-c"
+          glowColor="#42C8DE"
           tech={[
             {
-              icon: <i className="devicon-typescript-plain colored" />,
-              label: "TypeScript",
+              icon: <i className="devicon-c-plain colored" />,
+              label: "C",
             },
             {
-              icon: <i className="devicon-react-original colored" />,
-              label: "React",
+              icon: <img src="/icons/neovim.png" className="w-8 h-10" />,
+              label: "Neovim",
             },
           ]}
-          extraLinks={[{ label: "Docs", href: "https://example.com/docs" }]}
         />
       </div>
     </section>

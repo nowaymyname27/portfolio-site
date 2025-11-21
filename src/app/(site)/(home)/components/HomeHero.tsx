@@ -6,7 +6,7 @@ import { FiFileText } from "react-icons/fi";
 
 export default function HomeHero() {
   return (
-    <section className="w-full min-h-screen px-6 md:px-20 py-10 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-0 bg-background">
+    <section className="w-full min-h-screen px-6 md:px-20 py-6 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-0 bg-background">
       {/* LEFT SIDE */}
       <motion.div
         className="
@@ -20,7 +20,13 @@ export default function HomeHero() {
       >
         {/* Name */}
         <h1 className="text-6xl lg:text-8xl font-bold text-black leading-tight">
-          Jose Ramirez
+          <motion.span
+            whileHover={{ color: "var(--main)" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="inline-block cursor-pointer"
+          >
+            Jose Ramirez
+          </motion.span>
         </h1>
 
         {/* MOBILE IMAGE (appears until lg) */}
@@ -72,9 +78,10 @@ export default function HomeHero() {
             </motion.div>
           </div>
         </div>
-
-        {/* Username */}
-        <h2 className="text-2xl lg:text-3xl text-black/80">NoWayMyName</h2>
+        <h2 className="text-2xl lg:text-3xl text-black/80">
+          Computer Science graduate from{" "}
+          <span style={{ color: "#cc0001" }}>Boston University</span>.
+        </h2>
 
         {/* Description */}
         <p className="text-xl lg:text-2xl text-black/70 leading-relaxed">
@@ -150,7 +157,7 @@ export default function HomeHero() {
 
           {/* Resume */}
           <motion.a
-            href="#"
+            href="/home/resume_2025.pdf"
             target="_blank"
             className="
               group flex items-center h-14 rounded-full

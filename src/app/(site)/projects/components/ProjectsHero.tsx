@@ -10,7 +10,6 @@ export default function ProjectsHero() {
       className="
         w-full 
         px-6 lg:px-14 
-        lg:py-10 
         flex items-center justify-center
       "
     >
@@ -72,9 +71,11 @@ export default function ProjectsHero() {
           </div>
 
           <p className="text-xl md:text-2xl leading-relaxed text-gray-600 max-w-2xl">
-            My projects use a wide range of modern technologies. I focus on
-            creating high-quality applications and deploying them with scalable,
-            cloud-ready workflows.
+            I love building things that feel smooth, modern, and intentional.
+            From polished web apps and client websites to data science projects
+            and even low-level systems in C, I focus on clean design, crisp
+            animations, and reliable engineering. Anything that mixes aesthetics
+            with actual technical depth is right up my alley.
           </p>
         </motion.div>
 

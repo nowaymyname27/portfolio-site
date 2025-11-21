@@ -8,7 +8,7 @@ export default function Experience() {
 
       <div className="space-y-16">
         <EntryCard
-          logo="/SaraHomes_logo.png" // replace with the actual file if needed
+          logo="/about/SaraHomes_logo.png" // replace with the actual file if needed
           title="BeHome Developers"
           subtitle="Web & Data Management Intern"
           date="Summer Intern 2023 & 2024"
@@ -21,7 +21,7 @@ export default function Experience() {
           ]}
         />
         <EntryCard
-          logo="/following_logo.png" // replace with actual file if needed
+          logo="/about/following_logo.png" // replace with actual file if needed
           title="Following NYC"
           subtitle="Freelance Web Designer"
           date="August 2025"
@@ -35,7 +35,7 @@ export default function Experience() {
         />
 
         <EntryCard
-          logo="/RP_brand.png" // replace with your local asset
+          logo="/about/RP_brand.png" // replace with your local asset
           title="RentPortfolio"
           subtitle="Freelance Web Designer"
           date="September – December 2025"

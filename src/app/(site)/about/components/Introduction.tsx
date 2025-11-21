@@ -40,10 +40,10 @@ export default function Introduction() {
               style={{ backfaceVisibility: "hidden" }}
             >
               <Image
-                src="/fox_bw.png"
+                src="/about/me_bw.png"
                 alt="Fox BW"
                 fill
-                className="rounded-full object-cover"
+                className=" object-cover"
               />
             </div>
 

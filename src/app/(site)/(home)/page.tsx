@@ -14,7 +14,7 @@ export default function Home() {
       <HomeHero />
 
       <motion.div
-        className="w-full text-center mt-32 mb-10"
+        className="w-full text-center mt-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
