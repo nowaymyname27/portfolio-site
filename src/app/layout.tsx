@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jose Ramirez | Portfolio",
+  title: "Jose Ramirez | Portfolio Site",
   description:
     "Personal portfolio showcasing my development work and projects.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -25,13 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-[var(--background)] text-[var(--foreground)]">
-      <head>
-        {/* Devicon CDN for all tool logos */}
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        />
-      </head>
+      <head />
 
       <body
         className={`
@@ -42,6 +39,10 @@ export default function RootLayout({
           text-[var(--foreground)]
         `}
       >
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
         {children}
       </body>
     </html>
