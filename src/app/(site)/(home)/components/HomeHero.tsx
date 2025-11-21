@@ -157,7 +157,7 @@ export default function HomeHero() {
 
           {/* Resume */}
           <motion.a
-            href="/home/resume_2025.pdf"
+            href="/home/Resume_2025.pdf"
             target="_blank"
             className="
               group flex items-center h-14 rounded-full
