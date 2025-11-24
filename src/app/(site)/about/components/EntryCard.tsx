@@ -19,7 +19,7 @@ export default function EntryCard({
   subtitle,
   date,
   bullets,
-  hoverColor = "#cc0001", // default accent color
+  hoverColor = "#cc0001",
 }: EntryCardProps) {
   return (
     <motion.div
@@ -34,13 +34,13 @@ export default function EntryCard({
           y: -6,
           boxShadow: "0 12px 30px rgba(0,0,0,0.15)",
           borderColor: hoverColor,
-          backgroundColor: `${hoverColor}10`, // subtle tint using hex + opacity
+          backgroundColor: `${hoverColor}10`,
         }}
         transition={{ duration: 0.25, ease: "easeOut" }}
         className="
           w-full
           rounded-2xl
-          p-10
+          p-6 md:p-10
           border
           bg-[var(--bg-card)]
           border-[var(--border-color)]
@@ -49,8 +49,9 @@ export default function EntryCard({
           duration-200
         "
       >
-        <div className="flex flex-col md:flex-row gap-10 md:items-center">
-          <div className="w-40 h-40 relative flex-shrink-0">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-10 md:items-center">
+          {/* Smaller logo on mobile */}
+          <div className="w-24 h-24 md:w-40 md:h-40 relative flex-shrink-0">
             <Image
               src={logo}
               alt={title + " logo"}
@@ -66,18 +67,18 @@ export default function EntryCard({
               className="flex flex-col md:flex-row md:justify-between md:items-start"
             >
               <div>
-                <h3 className="text-3xl font-bold">{title}</h3>
-                <p className="text-xl font-medium opacity-90 mt-1">
+                <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>
+                <p className="text-lg md:text-xl font-medium opacity-90 mt-1">
                   {subtitle}
                 </p>
               </div>
 
-              <p className="text-md opacity-80 mt-2 md:mt-0 md:text-right">
+              <p className="text-sm md:text-md opacity-80 mt-2 md:mt-0 md:text-right">
                 {date}
               </p>
             </motion.div>
 
-            <ul className="mt-6 text-lg opacity-90 leading-relaxed space-y-3 list-disc list-inside">
+            <ul className="mt-5 text-base md:text-lg opacity-90 leading-relaxed space-y-3 list-disc pl-5">
               {bullets.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}

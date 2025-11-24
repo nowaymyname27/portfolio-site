@@ -17,7 +17,7 @@ export default function Introduction() {
     >
       <div className="flex flex-col items-center">
         <motion.div
-          className="w-50 h-50 md:w-64 md:h-64 relative mb-12"
+          className="w-50 h-50 md:w-64 md:h-64 relative mb-8"
           style={{ perspective: 1000 }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}

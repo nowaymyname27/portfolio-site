@@ -9,7 +9,7 @@ export default function ProjectsHero() {
     <section
       className="
         w-full 
-        px-6 lg:px-14 
+        px-4 lg:px-16 pt-10
         flex items-center justify-center
       "
     >
@@ -70,7 +70,7 @@ export default function ProjectsHero() {
             </motion.div>
           </div>
 
-          <p className="text-xl md:text-2xl leading-relaxed text-gray-600 max-w-2xl">
+          <p className="text-l md:text-2xl leading-relaxed text-gray-600 max-w-2xl">
             I love building things that feel smooth, modern, and intentional.
             From polished web apps and client websites to data science projects
             and even low-level systems in C, I focus on clean design, crisp

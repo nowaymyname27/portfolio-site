@@ -15,7 +15,7 @@ export default function ProjectsSection() {
     <section
       className="
         w-full 
-        px-6 sm:px-10 lg:px-16 
+        px-2 sm:px-10 lg:px-16 
         py-10 lg:py-24
       "
     >

@@ -10,7 +10,7 @@ export default function ProjectsPage() {
     <main className="w-full flex flex-col">
       <Header />
 
-      <section className="w-full px-16">
+      <section className="w-full">
         <ProjectsHero />
         <ProjectsSection />
       </section>
