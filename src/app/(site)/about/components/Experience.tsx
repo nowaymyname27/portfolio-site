@@ -3,7 +3,7 @@ import EntryCard from "./EntryCard";
 
 export default function Experience() {
   return (
-    <section className="w-full px-6 py-20">
+    <section className="w-full px-4 md:px-16 py-10">
       <h2 className="text-4xl font-semibold mb-10">Experience</h2>
 
       <div className="space-y-16">

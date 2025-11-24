@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <main>
       <Header />
-      <div className="w-full px-16">
+      <div className="w-full">
         <Introduction />
         <Education />
         <Experience />

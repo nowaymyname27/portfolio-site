@@ -35,6 +35,7 @@ export default function SplitSection({
         flex flex-col lg:flex-row 
         items-center justify-between 
         gap-6 lg:gap-20
+        overflow-hidden lg:overflow-visible   /* <-- FIX ADDED HERE */
         ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}
       `}
     >
@@ -84,7 +85,7 @@ export default function SplitSection({
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        {/* Heading — updated text size */}
+        {/* Heading */}
         <motion.h3
           className="text-4xl md:text-5xl font-bold text-black leading-tight cursor-pointer"
           whileHover={{ color: "var(--main)" }}

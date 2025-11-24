@@ -99,7 +99,7 @@ export default function ContactCard({
         flex-col 
         gap-6 
 
-        min-w-[450px]
+        min-w-[320px] md:min-w-[450px]
         max-w-[500px]
         mx-auto
       "

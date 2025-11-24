@@ -14,7 +14,7 @@ export default function Home() {
       <HomeHero />
 
       <motion.div
-        className="w-full text-center pb-12 layout-padding"
+        className="text-center pb-12 layout-padding"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}

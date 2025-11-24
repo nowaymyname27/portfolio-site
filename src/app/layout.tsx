@@ -27,7 +27,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-[var(--background)] text-[var(--foreground)]">
+    <html
+      lang="en"
+      className="overflow-x-hidden bg-[var(--background)] text-[var(--foreground)]"
+    >
       <head />
 
       <body
@@ -35,6 +38,7 @@ export default function RootLayout({
           ${geistSans.variable}
           ${geistMono.variable}
           antialiased
+          overflow-x-hidden
           bg-[var(--background)]
           text-[var(--foreground)]
         `}
