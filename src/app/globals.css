@@ -42,3 +42,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Global layout padding */
+.layout-padding {
+  @apply px-4 md:px-16;
+}

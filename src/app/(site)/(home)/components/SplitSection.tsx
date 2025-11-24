@@ -29,13 +29,14 @@ export default function SplitSection({
   return (
     <section
       className={`
-    w-full min-h-auto lg:min-h-[70vh] 
-    px-6 lg:px-20 
-    flex flex-col lg:flex-row 
-    items-center justify-between 
-    gap-6 lg:gap-20
-    ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}
-  `}
+        w-full min-h-auto lg:min-h-[70vh] 
+        layout-padding 
+        pb-10
+        flex flex-col lg:flex-row 
+        items-center justify-between 
+        gap-6 lg:gap-20
+        ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}
+      `}
     >
       {/* DESKTOP IMAGE */}
       <motion.div
@@ -66,7 +67,7 @@ export default function SplitSection({
 
           <motion.img
             src={imageBW}
-            alt={heading + " BW Version"}
+            alt={`${heading} BW Version`}
             className="absolute inset-0 w-full h-full object-contain"
             initial={{ opacity: 1 }}
             whileHover={{ opacity: 0 }}
@@ -77,15 +78,15 @@ export default function SplitSection({
 
       {/* TEXT SIDE */}
       <motion.div
-        className="w-full lg:w-1/2 flex flex-col gap-10 text-center lg:text-left"
+        className="w-full lg:w-1/2 flex flex-col text-center lg:text-left"
         initial={{ opacity: 0, x: reverse ? -60 : 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        {/* Heading */}
+        {/* Heading — updated text size */}
         <motion.h3
-          className="text-5xl font-bold text-black leading-tight cursor-pointer"
+          className="text-4xl md:text-5xl font-bold text-black leading-tight cursor-pointer"
           whileHover={{ color: "var(--main)" }}
           transition={{ duration: 0.25, ease: "easeOut" }}
         >
@@ -115,7 +116,7 @@ export default function SplitSection({
 
             <motion.img
               src={imageBW}
-              alt={heading + " BW Version"}
+              alt={`${heading} BW Version`}
               className="absolute inset-0 w-full h-full object-contain"
               initial={{ opacity: 1 }}
               whileHover={{ opacity: 0 }}
@@ -128,7 +129,7 @@ export default function SplitSection({
         <motion.div
           className="
             flex flex-wrap items-center justify-center lg:justify-start
-            gap-7 text-5xl text-black max-w-[90%] mx-auto lg:mx-0
+            gap-6 text-5xl text-black
           "
           initial="hidden"
           whileInView="show"
@@ -168,7 +169,7 @@ export default function SplitSection({
         </motion.div>
 
         {/* Description */}
-        <p className="text-2xl text-black/70 leading-relaxed max-w-[90%] mx-auto lg:mx-0">
+        <p className="text-xl md:text-2xl pt-8 text-black/70 leading-relaxed">
           {description}
         </p>
       </motion.div>

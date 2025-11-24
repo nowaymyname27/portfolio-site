@@ -6,7 +6,7 @@ import { FiFileText } from "react-icons/fi";
 
 export default function HomeHero() {
   return (
-    <section className="w-full min-h-screen px-6 md:px-20 py-6 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-0 bg-background">
+    <section className="w-full min-h-screen layout-padding py-6 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-0 bg-background">
       {/* LEFT SIDE */}
       <motion.div
         className="

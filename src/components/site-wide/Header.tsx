@@ -9,6 +9,9 @@ export default function Header() {
   const [hoverHome, setHoverHome] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // NEW: force home icon whenever menu is open
+  const showHomeIcon = hoverHome || menuOpen;
+
   return (
     <motion.header
       className="
@@ -32,7 +35,7 @@ export default function Header() {
         >
           <div className="relative overflow-hidden w-14 h-14 flex items-center justify-center md:w-16 md:h-16">
             <AnimatePresence mode="wait">
-              {!hoverHome ? (
+              {!showHomeIcon ? (
                 <motion.div
                   key="logo"
                   className="w-full h-full rounded-full flex items-center justify-center overflow-hidden"
@@ -62,10 +65,10 @@ export default function Header() {
             </AnimatePresence>
           </div>
 
-          {/* FIXED NAME WRAPPER */}
-          <div className="relative overflow-visible h-auto min-h-[1.75rem] flex items-center">
+          {/* NAME OR HOME TEXT */}
+          <div className="relative overflow-hidden h-auto min-h-[1.75rem] flex items-center">
             <AnimatePresence mode="wait">
-              {!hoverHome ? (
+              {!showHomeIcon ? (
                 <motion.span
                   key="name"
                   className="
