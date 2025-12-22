@@ -167,6 +167,49 @@ export default function ProjectsSection() {
             },
           ]}
         />
+        <ProjectCard
+          title="RentPortfolio Website"
+          description="This very site you are on! Built using React, Next.js, TailwindCSS, and some sweet server-side rendering."
+          image={{
+            src: "/projects/RP_whitebg_logo.png",
+            alt: "RentPortfolio website logo",
+          }}
+          github="https://github.com/nowaymyname27/behome-site"
+          glowColor="#233341"
+          tech={[
+            {
+              icon: <i className="devicon-react-original colored" />,
+              label: "React",
+            },
+            {
+              icon: <i className="devicon-tailwindcss-plain colored" />,
+              label: "TailwindCSS",
+            },
+            {
+              icon: <i className="devicon-typescript-plain colored" />,
+              label: "TypeScript",
+            },
+            { icon: <SiNextdotjs />, label: "Next.js" },
+            {
+              icon: <i className="devicon-framermotion-plain colored" />,
+              label: "Framer Motion",
+            },
+            {
+              icon: <img src="/icons/cloudinary.svg" className="w-8 h-10" />,
+              label: "Cloudinary",
+            },
+            {
+              icon: <i className="devicon-sanity-plain colored" />,
+              label: "Sanity",
+            },
+          ]}
+          extraLinks={[
+            {
+              label: "Live Site",
+              href: "https://www.rentportfolio.com/",
+            },
+          ]}
+        />
       </div>
     </section>
   );
