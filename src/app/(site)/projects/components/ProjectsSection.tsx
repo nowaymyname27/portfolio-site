@@ -175,7 +175,7 @@ export default function ProjectsSection() {
             alt: "RentPortfolio website logo",
           }}
           github="https://github.com/nowaymyname27/behome-site"
-          glowColor="#233341"
+          glowColor="#F2B078"
           tech={[
             {
               icon: <i className="devicon-react-original colored" />,
