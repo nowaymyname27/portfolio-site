@@ -169,7 +169,7 @@ export default function ProjectsSection() {
         />
         <ProjectCard
           title="RentPortfolio Website"
-          description="This very site you are on! Built using React, Next.js, TailwindCSS, and some sweet server-side rendering."
+          description="I built a bilingual real estate site for a client that helps investors see exactly what kind of returns they can get from build-to-rent homes using some cool interactive tools."
           image={{
             src: "/projects/RP_whitebg_logo.png",
             alt: "RentPortfolio website logo",
