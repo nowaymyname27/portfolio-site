@@ -7,8 +7,7 @@ import PandasOriginal from "react-devicons/pandas/original";
 import JupyterOriginalWordmark from "react-devicons/jupyter/original-wordmark";
 
 // Devicon-based icons (colored)
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 export default function ProjectsSection() {
   return (
@@ -31,7 +30,6 @@ export default function ProjectsSection() {
           justify-items-center
         "
       >
-        {/* Sample 1 */}
         <ProjectCard
           title="Portfolio Website"
           description="This very site you are on! Built using React, Next.js, TailwindCSS, and some sweet server-side rendering."
@@ -59,6 +57,31 @@ export default function ProjectsSection() {
               icon: <i className="devicon-framermotion-plain colored" />,
               label: "Framer Motion",
             },
+          ]}
+        />
+        <ProjectCard
+          title="C-Side Text Editor"
+          description="A text editor written in C from scratch using Raylib and Clay"
+          image={{
+            src: "/projects/c-side.png",
+            alt: "C-Side Project",
+          }}
+          github="https://github.com/nowaymyname27/C-Side"
+          glowColor="#FACC00"
+          tech={[
+            {
+              icon: <i className="devicon-c-plain colored" />,
+              label: "C",
+            },
+            {
+              icon: <img src="/icons/Raylib_logo.png" className="w-10 h-10" />,
+              label: "Raylib",
+            },
+            {
+              icon: <img src="/icons/neovim.png" className="w-8 h-10" />,
+              label: "Neovim",
+            },
+            
           ]}
         />
         <ProjectCard
